@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { currency, backendUrl } from '../App';
-import './PaymentMethod.css';
+import './paymentMethod.css';
 import axios from 'axios';
 
 const PaymentMethod = () => {
