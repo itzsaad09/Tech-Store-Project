@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import logo from "/src/assets/logo1.png";
 import "./Navbar.css";
-import Menu from "../components/menu.jsx";
+import Menu from "../components/Menu.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
