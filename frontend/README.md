@@ -1,12 +1,29 @@
-# React + Vite
+<h1 align="center">Welcome to frontend 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/frontend" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/frontend.svg">
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Install
 
-Currently, two official plugins are available:
+```sh
+npm install
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Author
 
-## Expanding the ESLint configuration
+👤 **Hafiz Muhammad Saad**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Github: [@itz.saad09](https://github.com/itz.saad09)
+* LinkedIn: [@itz.saad09](https://linkedin.com/in/itz.saad09)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
