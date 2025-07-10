@@ -26,7 +26,7 @@ Here's a breakdown of what a typical React Tech Store Project entails:
 
 ## **Installation**
 * **Clone the repository:**
-   git clone [[https://github.com/itzsaad09/Tech-Store-Project.git](https://github.com/itzsaad09/Tech-Store-Project.git)<br/>
+   git clone [https://github.com/itzsaad09/Tech-Store-Project.git](https://github.com/itzsaad09/Tech-Store-Project.git)<br/>
 *  Open Folder in VS Code or Any IDE
 *  Open New Terminal
   
