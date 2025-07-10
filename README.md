@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Tech-Store-Project 👋</h1>
 <p>
-  <a href="LISCENSE.md" target="_blank">
+  <a href="LICENSE.md" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
 </p>
@@ -26,7 +26,7 @@ Here's a breakdown of what a typical React Tech Store Project entails:
 
 ## **Installation**
 * **Clone the repository:**
-   git clone [[https://github.com/itzsaad09/Tech-Store-Project.git](https://github.com/itzsaad09/Tech-Store-Project.git)<br/>
+   git clone [https://github.com/itzsaad09/Tech-Store-Project.git](https://github.com/itzsaad09/Tech-Store-Project.git)<br/>
 *  Open Folder in VS Code or Any IDE
 *  Open New Terminal
   
