@@ -5,11 +5,21 @@
   </a>
 </p>
 
+## Table of Contents
+- [Purpose](#core-purpose)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Grade Point System](#grade-point-system)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contibuting)
+- [License](#license)
+- [Author](#authors)
+
 A **React Tech Store Project** is essentially an e-commerce application built using the React JavaScript library for the front-end user interface. It simulates the functionalities of an online store selling various technology products (e.g., smartphones, laptops, accessories, etc.).
 
 Here's a breakdown of what a typical React Tech Store Project entails:
 
-**Core Purpose:**
+## **Core Purpose:**
 
 * To create a dynamic, interactive, and responsive online shopping experience for users.
 * To showcase proficiency in React.js for building robust front-end applications.
