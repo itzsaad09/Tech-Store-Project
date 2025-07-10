@@ -19,7 +19,7 @@ function ViralProducts() {
   useEffect(() => {
     const fetchViralProducts = async () => {
       try {
-        const response = await axios.get(backendUrl + "api/product/display");
+        const response = await axios.get(backendUrl + "/api/product/display");
 
         if (response.status === 200) {
           const filteredViralProducts = response.data.products
