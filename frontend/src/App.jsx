@@ -14,7 +14,7 @@ import TermsofServices from "./pages/TermsofServices.jsx"
 import Footer from "./components/Footer";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
-import Cart from "./components/Cart.jsx";
+import Cart from "./components/cart.jsx";
 import Shipping from "./components/shippingDetails.jsx"
 import PaymentMethod from "./components/paymentMethod.jsx"
 import MyOrders from "./pages/MyOrders.jsx"
