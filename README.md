@@ -8,10 +8,9 @@
 ## Table of Contents
 - [Purpose](#core-purpose)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Grade Point System](#grade-point-system)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contibuting)
+- [Features](#key-features-and-functionalities)
+- [Technologies Used](#technologies-commonly-used)
+- [Snapshots](#snapshots)
 - [License](#license)
 - [Author](#authors)
 
@@ -25,7 +24,23 @@ Here's a breakdown of what a typical React Tech Store Project entails:
 * To showcase proficiency in React.js for building robust front-end applications.
 * To demonstrate understanding of key e-commerce functionalities and best practices in web development.
 
-**Key Features and Functionalities:**
+## **Installation**
+* **Clone the repository:**
+   git clone [[https://github.com/itzsaad09/Tech-Store-Project.git](https://github.com/itzsaad09/Tech-Store-Project.git)<br/>
+*  Open Folder in VS Code or Any IDE
+*  Open New Terminal
+  
+1. cd frontend
+    - npm install
+    - npm run dev
+2. cd admin
+   - npm install
+   - npm run dev
+3. cd backend
+   - npm i express
+   - nodemon server.js
+
+## **Key Features and Functionalities:**
 
 * **Product Listing/Catalog:**
     * Display a wide range of tech products with images, names, prices, and brief descriptions.
@@ -56,7 +71,7 @@ Here's a breakdown of what a typical React Tech Store Project entails:
     * Fetching product data from an API (e.g., a custom backend).
     * (For a full-stack project) Interacting with a backend for user authentication, order processing, and database management.
 
-**Technologies Commonly Used:**
+## **Technologies Commonly Used:**
 
 * **Frontend:**
     * **React.js:** The core JavaScript library for building UI components.
@@ -88,6 +103,9 @@ Building a React Tech Store Project is an excellent way to:
 ![New Arrivals](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(2).png)<br/><br/>
 ![Checkout](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(4).png)<br/><br/>
 ![Track Order](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(5).png)<br/><br/>
+
+## License
+This project is open-source and available under the MIT License.
 
 ## Authors
 
