@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  /* Adjust height if needed, depends on overall layout */
+  height: 100vh;
+  background-color: #f8f8ff;
+  align-items: center; /* Center vertically */
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-left: 19rem;
+  background-color: transparent;
+  color: #058ad2;
+  font-size: 2rem;
+  font-variant: small-caps;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f8f8ff;
+  margin-top: -17rem; /* Adjusted margin-top for better spacing */
+  margin-left: 20rem;
+  padding-bottom: 2rem; /* Add some padding at the bottom for scroll trigger */
+}
+
+.product-card {
+  width: 250px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.product-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.edit-icon {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: #058ad2;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.edit-icon:hover,
+.edit-icon:active {
+  color: #2f0fff;
+  transform: scale(1.1);
+}
+
+.delete-icon {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: #058ad2;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.delete-icon:hover,
+.delete-icon:active {
+  color: red;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .dashboard h1 {
+    margin-left: 15rem;
+    font-size: 1.8rem;
+  }
+
+  .product-list {
+    margin-left: 16rem;
+    margin-top: -30rem; /* Adjusted */
+  }
+
+  .product-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard h1 {
+    margin-left: 12rem;
+    font-size: 1.6rem;
+  }
+
+  .product-list {
+    margin-left: 0;
+    margin-top: -35rem; /* Adjusted */
+  }
+
+  .product-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .product-list {
+    margin-left: 0;
+    margin-top: -28rem; /* Adjusted */
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}

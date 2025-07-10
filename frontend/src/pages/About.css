@@ -1,0 +1,220 @@
+/* About.css */
+
+.about-container {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 20px;
+}
+
+.about-header h1 {
+  font-size: 2.8em;
+  color: #007bff; /* A prominent brand color */
+  margin-bottom: 10px;
+}
+
+.about-header .tagline {
+  font-size: 1.2em;
+  color: #555;
+  font-style: italic;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+section h2 {
+  font-size: 2em;
+  color: #007bff;
+  margin-bottom: 15px;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
+}
+
+.about-intro p,
+.about-offerings p,
+.about-commitment p,
+.about-delivery p,
+.about-cta p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.product-categories ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+.product-categories li {
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border-left: 3px solid #007bff;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 1.05em;
+}
+
+.shop-now-button {
+  display: block;
+  width: 200px;
+  margin: 30px auto 0;
+  padding: 15px 25px;
+  background-color: #058ad2; /* A success/action color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-button:hover {
+  background-color: #04659b;
+}
+
+/* --- Media Queries --- */
+
+/* For screens smaller than 1024px (e.g., tablets in landscape, smaller desktops) */
+@media (max-width: 1023px) {
+  .about-container {
+    max-width: 960px; /* Slightly reduce max-width */
+    margin: 30px auto;
+    padding: 18px;
+  }
+
+  .about-header h1 {
+    font-size: 2.5em;
+  }
+
+  section h2 {
+    font-size: 1.8em;
+  }
+
+  .about-intro p,
+  .about-offerings p,
+  .about-commitment p,
+  .about-delivery p,
+  .about-cta p {
+    font-size: 1.05em;
+  }
+
+  .product-categories ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid columns */
+  }
+}
+
+/* For screens smaller than 768px (e.g., tablets in portrait, larger smartphones) */
+@media (max-width: 767px) {
+  .about-container {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px; /* Slightly smaller border-radius */
+  }
+
+  .about-header h1 {
+    font-size: 2em;
+  }
+
+  .about-header .tagline {
+    font-size: 1.1em;
+  }
+
+  section h2 {
+    font-size: 1.6em;
+    padding-left: 8px; /* Reduce padding for smaller screens */
+    border-left-width: 4px; /* Reduce border thickness */
+  }
+
+  .about-intro p,
+  .about-offerings p,
+  .about-commitment p,
+  .about-delivery p,
+  .about-cta p {
+    font-size: 1em;
+  }
+
+  .product-categories ul {
+    grid-template-columns: 1fr; /* Stack categories vertically */
+    gap: 8px;
+  }
+
+  .product-categories li {
+    padding: 12px 15px;
+    font-size: 1em;
+  }
+
+  .shop-now-button {
+    width: 250px; /* Adjust button width */
+    padding: 12px 20px;
+    font-size: 1.1em;
+  }
+}
+
+/* For screens smaller than 480px (e.g., most smartphones) */
+@media (max-width: 479px) {
+  .about-container {
+    margin: 10px;
+    padding: 10px;
+    box-shadow: none; /* Remove shadow on very small screens for cleaner look */
+  }
+
+  .about-header h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+
+  .about-header .tagline {
+    font-size: 1em;
+  }
+
+  section {
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  section h2 {
+    font-size: 1.4em;
+    padding-left: 5px;
+    border-left-width: 3px;
+    margin-bottom: 10px;
+  }
+
+  .about-intro p,
+  .about-offerings p,
+  .about-commitment p,
+  .about-delivery p,
+  .about-cta p {
+    font-size: 0.95em; /* Slightly smaller text for better fit */
+  }
+
+  .product-categories li {
+    padding: 10px 12px;
+    font-size: 0.95em;
+  }
+
+  .shop-now-button {
+    width: 100%; /* Full width button */
+    padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+}

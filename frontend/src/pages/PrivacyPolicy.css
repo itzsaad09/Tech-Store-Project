@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.privacypolicy {
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.privacypolicy h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-variant: small-caps;
+    text-decoration-line: underline;
+    text-decoration-color: #058ad2;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacypolicy p {
+    text-align: justify;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacypolicy h4 {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}

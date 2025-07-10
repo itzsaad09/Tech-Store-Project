@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: #f0f8ff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.logo-container {
+  margin-left: 5rem;
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+}
+
+.logo {
+  width: 6.25rem;
+  height: auto;
+  cursor: pointer;
+  background-color: #f0f8ff;
+}
+
+.sidebar h2 {
+  color: #058ad2;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  margin-left: 3.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.add-product,
+.list-item,
+.orders,
+.users,
+.logout {
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+  margin-left: 3.125rem;
+}
+
+.add-product-button,
+.list-item-button,
+.orders-button,
+.users-button,
+.logout-button {
+  position: relative;
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: medium;
+  background-color: #058ad2;
+  color: white;
+  font-weight: 700;
+  transition: all 900ms ease-in;
+  cursor: pointer;
+}
+
+.add-product .add-icon,
+.list-item .list-icon,
+.orders .orders-icon,
+.users .users-icon,
+.logout .logout-icon {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: black;
+  background-color: transparent;
+  float: left;
+  transition: all 900ms ease-in;
+}
+
+.logout .logout-icon {
+  rotate: 180deg;
+}
+
+.add-product-button:hover,
+.list-item-button:hover,
+.orders-button:hover,
+.users-button:hover,
+.logout-button:hover {
+  position: relative;
+  bottom: 0.188;
+  background: linear-gradient(144deg, #9706ff, #2f0fff 50%, #18f0ff);
+  cursor: pointer;
+}
+
+.vertical-line {
+  border-left: 2px solid gray;
+  height: 100%;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+@keyframes input {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 30%;
+  }
+
+  .sidebar h2 {
+    margin-left: 2.125rem;
+  }
+}
+
+/* For screens smaller than 768px (tablets and mobile) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width */
+    height: auto; /* Height adapts to content */
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    padding: 0.5rem 0; /* Add some padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .logo-container {
+    margin-left: 0; /* Remove left margin */
+    display: none; /* Hide logo on smaller screens if desired */
+  }
+
+  .logo {
+    width: 4rem; /* Adjust logo size */
+  }
+
+  .sidebar h2 {
+    margin-left: 0; /* Remove left margin */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .add-product,
+  .list-item,
+  .orders,
+  .logout {
+    margin: 0; /* Remove margins for horizontal layout */
+  }
+
+  .add-product-button,
+  .list-item-button,
+  .orders-button,
+  .logout-button {
+    width: 3rem; /* Make buttons smaller (icon only) */
+    height: 3rem; /* Make buttons square */
+    border-radius: 50%; /* Make them circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Hide text */
+    padding: 0; /* Remove padding */
+  }
+
+  .add-product-button span, /* Select the text content inside the button */
+  .list-item-button span,
+  .orders-button span,
+  .logout-button span {
+    display: none; /* Hide text */
+  }
+
+  .add-product .add-icon,
+  .list-item .list-icon,
+  .orders .orders-icon,
+  .logout .logout-icon {
+    margin: 0; /* Remove icon margins */
+    float: none; /* Remove float */
+    font-size: 1.5rem; /* Make icons larger */
+  }
+
+  .vertical-line {
+    display: none; /* Hide vertical line on small screens */
+  }
+}
+
+/* For screens smaller than 480px (very small mobile devices) */
+@media (max-width: 480px) {
+  .sidebar {
+    justify-content: space-around; /* Re-adjust spacing */
+  }
+
+  .add-product-button,
+  .list-item-button,
+  .orders-button,
+  .logout-button {
+    width: 2.5rem; /* Even smaller buttons */
+    height: 2.5rem;
+  }
+
+  .add-product .add-icon,
+  .list-item .list-icon,
+  .orders .orders-icon,
+  .logout .logout-icon {
+    font-size: 1.2rem; /* Slightly smaller icons */
+  }
+}

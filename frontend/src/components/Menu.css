@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    background-color: #058ad2;
+    padding: 0.625rem;
+    text-align: center;
+}
+
+.menu button {
+    padding: 0.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: #058ad2;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.menu button:hover, button:active {
+    color: black;
+}
+
+.menu select {
+    width: 8rem;
+    padding: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #058ad2;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.menu select:hover, select:active {
+    color: black;
+}
+
+.menu select option {
+    padding: 0.5rem;
+    background-color: white;
+    color: #058ad2;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.menu select option:hover, option:active {
+    background-color: #058ad2;
+    color: white;
+}
+
+.menu button.active {
+  color: black;
+  /* or any other styling you prefer */
+}
+ 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu {
+    padding: 0.5rem;
+  }
+  
+  .menu button, .menu select {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    width: 8rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem;
+  }
+  
+  .menu button, .menu select {
+    width: 100%;
+    text-align: center;
+  }
+}

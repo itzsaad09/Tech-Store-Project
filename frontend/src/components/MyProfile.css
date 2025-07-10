@@ -1,0 +1,121 @@
+/* MyProfile.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic layout for MyProfile page */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f8f8ff;
+    min-height: 100vh;
+    margin-left: 0; /* Adjust if using a sidebar */
+}
+
+/* Adjust if using a sidebar */
+.profile-container {
+    margin-left: 220px; /* Assuming sidebar width is around 200px + some margin */
+    padding-top: 2rem;
+}
+
+
+.profile-container h1 {
+    text-align: center;
+    color: #058ad2;
+    font-size: 2.5rem;
+    font-variant: small-caps;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-section {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 600px; /* Limit width for readability */
+    text-align: left;
+}
+
+.profile-section h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.profile-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.profile-section strong {
+    color: #000;
+}
+
+.error-message {
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments for MyProfile */
+@media (max-width: 768px) {
+    .profile-container {
+        margin-left: 0; /* Remove sidebar margin on smaller screens */
+        padding: 1rem;
+    }
+
+    .profile-container h1 {
+        font-size: 2rem;
+    }
+
+    .profile-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-section {
+        padding: 0.75rem;
+    }
+}
+
+/* Notification styles (if not already global or from other files) */
+/*
+.notifications { ... }
+.notification-item { ... }
+.notification-item.success { ... }
+.notification-item.error { ... }
+.notification-content { ... }
+.notification-icon { ... }
+.notification-text { ... }
+.notification-close { ... }
+.notification-progress-bar { ... }
+@keyframes progressBar { ... }
+*/
+/* You can copy the notification styles from viewProducts.css if you want them specifically here,
+   or ensure they are part of a global CSS file or App.css to avoid duplication. */
