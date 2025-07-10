@@ -18,8 +18,8 @@ npm install
 
 👤 **Hafiz Muhammad Saad**
 
-* Github: [@itz.saad09](https://github.com/itz.saad09)
-* LinkedIn: [@itz.saad09](https://linkedin.com/in/itz.saad09)
+* Github: [@itz.saad09](https://github.com/itzsaad09)
+* LinkedIn: [@itz.saad09](https://linkedin.com/in/itzsaad09)
 
 ## Show your support
 
