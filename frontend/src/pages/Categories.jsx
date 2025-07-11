@@ -34,7 +34,7 @@ function Categories() {
       setLoading(true);
       setError(null);
       try {
-        const apiUrl = backendUrl + "/api/product/category";
+        const apiUrl = backendUrl + "/api/product/display";
         const response = await axios.get(apiUrl, {
           params: { category: category === "all" ? "" : category },
         });
