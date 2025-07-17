@@ -5,207 +5,307 @@
 }
 
 .signupform {
-  height: 27em;
-  width: 30em;
-  padding: 4%;
-  border-radius: 1rem;
-  background: #e8e8e8;
-  box-shadow: 0.75rem 0.75rem 1.125rem #bababa,-0.75rem 0.75rem 1.125rem #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-evenly;
-  margin: auto;
-  margin-top: 1.563rem;
+    height: 27em;
+    width: 30em;
+    padding: 4%;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 0.75rem 0.75rem 1.125rem #bababa, -0.75rem 0.75rem 1.125rem #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 1.563rem;
 }
 
 .signupform #register-lable {
-  height: 15%;
-  text-align: center;
-  font-size: 34px;
-  letter-spacing: 3px;
-  font-weight: 600;
-  text-shadow: -2px -2px 3px #ffffff ,2px 2px 3px #bababa;
-  position: relative;
-  top: -14px;
+    height: 15%;
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-shadow: -2px -2px 3px #ffffff, 2px 2px 3px #bababa;
+    position: relative;
+    top: -14px;
 }
 
 .signupform .input {
-  height: 16%;
-  padding: 0.063rem 0.5rem;
-  border: none;
-  font-size: 1em;
-  letter-spacing: 0.063rem;
-  border-radius: 0.5rem;
-  background: #f3f3f3;
-  box-shadow: inset -0.125rem -0.125rem 0.25rem #ffffff,
-              inset 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.356);
-  text-decoration: none;
-  background: linear-gradient(to right,white, #80808010, white);
-  background-size: 200% 200%;
-  animation: input 4s infinite;
-  margin-bottom: 0.625rem;
+    height: 16%;
+    padding: 0.063rem 0.5rem;
+    border: none;
+    font-size: 1em;
+    letter-spacing: 0.063rem;
+    border-radius: 0.5rem;
+    background: #f3f3f3;
+    box-shadow: inset -0.125rem -0.125rem 0.25rem #ffffff,
+                inset 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.356);
+    text-decoration: none;
+    background: linear-gradient(to right, white, #80808010, white);
+    background-size: 200% 200%;
+    animation: input 4s infinite;
+    margin-bottom: 0.625rem;
 }
 
 .signupform .input:focus-visible {
-  outline: none;
-  background: rgb(241, 241, 241);
+    outline: none;
+    background: rgb(241, 241, 241);
 }
 
 .signupform #btn {
-  font-size: x-large;
-  letter-spacing: 0.188;
-  color: white;
-  font-weight: 700;
-  height: 18%;
-  background: linear-gradient(144deg,#af40ff,
-              #5b42f3 50%,#00ddeb);
-  border-radius: 0.5rem;
-  border: none;
-  box-shadow: inset 0.063 0.188rem 0.188rem #ffffffbd,
-               inset -0.25rem -0.25rem 0.188rem #00000046;
-  background-size: 150% 150%;
-  animation: input 5s infinite;
-  transition: all 900ms ease-in;
+    font-size: x-large;
+    letter-spacing: 0.188;
+    color: white;
+    font-weight: 700;
+    height: 18%;
+    background: linear-gradient(144deg, #af40ff,
+                #5b42f3 50%, #00ddeb);
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: inset 0.063rem 0.188rem 0.188rem #ffffffbd,
+                inset -0.25rem -0.25rem 0.188rem #00000046;
+    background-size: 150% 150%;
+    animation: input 5s infinite;
+    transition: all 900ms ease-in;
 }
 
 .signupform #btn:hover {
-  position: relative;
-  bottom: 0.188;
-  background: linear-gradient(144deg,#9706ff,
-              #2f0fff 50%,#18f0ff);
-              cursor: pointer;
+    position: relative;
+    bottom: 0.188rem; /* Corrected unit to rem for consistency */
+    background: linear-gradient(144deg, #9706ff,
+                #2f0fff 50%, #18f0ff);
+    cursor: pointer;
 }
 
 .signupform .login {
     background-color: transparent;
-  text-align: center;
-  /* color: #058ad2; */
-  font-size: 0.95em;
-  text-align: center;
-  margin: 0.313rem 0 0.625rem 0;
-  margin-bottom: 0rem;
-  cursor: pointer;
+    text-align: center;
+    font-size: 0.95em;
+    margin: 0.313rem 0 0.625rem 0;
+    margin-bottom: 0rem;
+    cursor: pointer;
 }
 
 .signupform .login a {
-  text-decoration: none;
-  color: #058ad2;
+    text-decoration: none;
+    color: #058ad2;
 }
 
 .signupform .login:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 @keyframes input {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Success Notification */
 .notification-item.success {
-  border: 1px solid #10b981; /* Green border */
+    border: 1px solid #10b981; /* Green border */
 }
 .notification-item.success .notification-icon svg {
-  color: #10b981; /* Green icon */
+    color: #10b981; /* Green icon */
 }
 .notification-item.success .notification-progress-bar {
-  background-color: #10b981; /* Green progress bar */
+    background-color: #10b981; /* Green progress bar */
 }
 
 /* Error */
 .error {
-  color: #7f1d1d;
-  background-color: #ff7e7e;
-  --grid-color: rgba(239, 68, 68, 0.25);
-  background-image: linear-gradient(
-      0deg,
-      transparent 23%,
-      var(--grid-color) 24%,
-      var(--grid-color) 25%,
-      transparent 26%,
-      transparent 73%,
-      var(--grid-color) 74%,
-      var(--grid-color) 75%,
-      transparent 76%,
-      transparent
+    color: #7f1d1d;
+    background-color: #ff7e7e;
+    --grid-color: rgba(239, 68, 68, 0.25);
+    background-image: linear-gradient(
+        0deg,
+        transparent 23%,
+        var(--grid-color) 24%,
+        var(--grid-color) 25%,
+        transparent 26%,
+        transparent 73%,
+        var(--grid-color) 74%,
+        var(--grid-color) 75%,
+        transparent 76%,
+        transparent
     ),
     linear-gradient(
-      90deg,
-      transparent 23%,
-      var(--grid-color) 24%,
-      var(--grid-color) 25%,
-      transparent 26%,
-      transparent 73%,
-      var(--grid-color) 74%,
-      var(--grid-color) 75%,
-      transparent 76%,
-      transparent
+        90deg,
+        transparent 23%,
+        var(--grid-color) 24%,
+        var(--grid-color) 25%,
+        transparent 26%,
+        transparent 73%,
+        var(--grid-color) 74%,
+        var(--grid-color) 75%,
+        transparent 76%,
+        transparent
     );
 }
 
 .error svg {
-  color: #7f1d1d;
-  background-color: transparent;
+    color: #7f1d1d;
+    background-color: transparent;
 }
 
 .error .notification-progress-bar {
-  background-color: #7f1d1d;
+    background-color: #7f1d1d;
 }
 
 .error:hover {
-  background-color: #ff5f5f;
+    background-color: #ff5f5f;
 }
 
 /* Notification content */
 .notification-content {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5em;
-  background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    background-color: transparent;
 }
 
 .notification-text {
-  font-size: var(--font-size-content);
-  user-select: none;
-  background-color: transparent;
+    font-size: var(--font-size-content);
+    user-select: none;
+    background-color: transparent;
 }
 
 .notification-close {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 .notification-progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  background: var(--content-color);
-  width: 100%;
-  transform: translateX(100%);
-
-  animation: progressBar 5s linear forwards infinite;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--content-color);
+    width: 100%;
+    transform: translateX(100%);
+    animation: progressBar 5s linear forwards infinite;
 }
 
-
 @keyframes progressBar {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
-  100% {
-    transform: translateX(-100%);
-  }
+/* Responsive Styles */
+
+/* For screens smaller than or equal to 1025px */
+@media (max-width: 1025px) {
+    .signupform {
+        width: 28em; /* Slightly smaller width */
+        height: 26em; /* Slightly smaller height */
+        padding: 3%;
+        margin-top: 1.25rem;
+    }
+
+    .signupform #register-lable {
+        font-size: 30px; /* Smaller font size */
+        top: -10px;
+    }
+
+    .signupform .input {
+        height: 15%;
+        font-size: 0.95em;
+        margin-bottom: 0.5rem;
+    }
+
+    .signupform #btn {
+        font-size: large; /* Smaller button text */
+        height: 16%;
+    }
+
+    .signupform .login {
+        font-size: 0.9em;
+    }
+}
+
+/* For screens smaller than or equal to 768px */
+@media (max-width: 768px) {
+    .signupform {
+        width: 25em; /* Even smaller width */
+        height: 24em; /* Even smaller height */
+        padding: 5%;
+        margin-top: 1rem;
+        box-shadow: 0.5rem 0.5rem 0.8rem #bababa, -0.5rem 0.5rem 0.8rem #ffffff; /* Adjusted shadow */
+    }
+
+    .signupform #register-lable {
+        font-size: 28px;
+        letter-spacing: 2px;
+        top: -8px;
+    }
+
+    .signupform .input {
+        height: 14%;
+        font-size: 0.9em;
+        padding: 0.05rem 0.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .signupform #btn {
+        font-size: medium;
+        letter-spacing: 0.15rem;
+        height: 15%;
+    }
+
+    .signupform .login {
+        font-size: 0.85em;
+    }
+}
+
+/* For screens smaller than or equal to 480px (mobile) */
+@media (max-width: 480px) {
+    .signupform {
+        width: 90%; /* Fluid width for small screens */
+        max-width: 20em; /* Max width to prevent it from getting too wide on some small screens */
+        height: auto; /* Auto height to accommodate content */
+        padding: 6%;
+        margin-top: 0.75rem;
+        border-radius: 0.75rem;
+        box-shadow: 0.3rem 0.3rem 0.6rem #bababa, -0.3rem 0.3rem 0.6rem #ffffff;
+    }
+
+    .signupform #register-lable {
+        font-size: 24px;
+        letter-spacing: 1px;
+        top: -5px;
+        height: auto; /* Adjust height for better flow */
+        margin-bottom: 1em; /* Add some space below the label */
+    }
+
+    .signupform .input {
+        height: 40px; /* Fixed height for inputs */
+        font-size: 0.85em;
+        padding: 0.3rem 0.6rem;
+        margin-bottom: 0.75rem;
+        border-radius: 0.4rem;
+    }
+
+    .signupform #btn {
+        font-size: medium;
+        letter-spacing: 0.1rem;
+        height: 45px; /* Fixed height for button */
+        margin-top: 0.5rem;
+    }
+
+    .signupform .login {
+        font-size: 0.8em;
+        margin-top: 0.5rem;
+    }
 }
