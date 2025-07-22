@@ -240,8 +240,8 @@ const PaymentMethod = () => {
                   onChange={handleCardDetailsChange}
                   placeholder="XXX"
                   required
-                  pattern="[0-9]{3,4}" // 3 or 4 digits
-                  title="CVV must be 3 or 4 digits"
+                  pattern="[0-9]{3}"
+                  title="CVV must be 3 digits"
                 />
               </div>
             </div>

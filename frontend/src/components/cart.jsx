@@ -5,7 +5,8 @@ import { currency } from "../App";
 import { Link } from "react-router-dom";
 
 const Form = () => {
-  const { cart, bill, loading, error, incrementQuantity, decrementQuantity } = useCart();
+  const { cart, bill, loading, error, incrementQuantity, decrementQuantity } =
+    useCart();
   const [checkedItems, setCheckedItems] = useState({});
   const cartItemsArray = Object.values(cart);
   const defaultShippingFee = 150;
@@ -43,13 +44,17 @@ const Form = () => {
     }));
   };
 
-  const filteredCartItems = cartItemsArray.filter(item => checkedItems[`${item.productId}_${item.color}`]);
+  const filteredCartItems = cartItemsArray.filter(
+    (item) => checkedItems[`${item.productId}_${item.color}`]
+  );
   const dataToSend = {
     cart: filteredCartItems,
     checkedBill: checkedBill,
     shippingFees: shippingFees,
     finalTotalBill: finalTotalBill,
   };
+
+  const isCheckoutDisabled = filteredCartItems.length === 0;
 
   return (
     <>
@@ -137,7 +142,7 @@ const Form = () => {
             <span>Shipping fees:</span>
             <span>
               {shippingFees === 0
-                ?  `${currency}0.00`
+                ? `${currency}0.00`
                 : `${currency}${shippingFees.toFixed(2)}`}
             </span>
           </div>
@@ -146,15 +151,21 @@ const Form = () => {
               <sup>{currency}</sup>
               {finalTotalBill.toFixed(2)}
             </label>
-            <Link
-              to="/shipping"
-              onClick={() => {
-                localStorage.setItem("cartData", JSON.stringify(dataToSend));
-              }}
-              className="checkout-btn"
-            >
-              Checkout
-            </Link>
+            {isCheckoutDisabled ? (
+              <button disabled className="checkout-btn disabled">
+                Checkout
+              </button>
+            ) : (
+              <Link
+                to="/shipping"
+                onClick={() => {
+                  localStorage.setItem("cartData", JSON.stringify(dataToSend));
+                }}
+                className="checkout-btn"
+              >
+                Checkout
+              </Link>
+            )}
           </div>
         </div>
       </div>

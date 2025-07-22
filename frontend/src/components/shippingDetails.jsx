@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./shippingDetails.css";
-import { currency } from "../App";
+import { currency, backendUrl } from "../App";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const ShippingDetails = () => {
