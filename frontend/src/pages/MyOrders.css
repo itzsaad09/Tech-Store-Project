@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .my-orders-container {
   max-width: 1000px;
   margin: 2rem auto;
@@ -22,7 +27,7 @@
 .orders-table-header,
 .order-row {
   display: grid;
-  grid-template-columns: 2fr 1.2fr 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr 1fr 1fr;
   gap: 1rem;
   padding: 0.75rem 0;
   align-items: center;
@@ -75,7 +80,7 @@
 
 .order-item-detail {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 0.5rem;
 }
 
@@ -90,28 +95,6 @@
 .row-product-name {
   font-weight: 500;
   font-size: 0.9rem;
-}
-
-.order-actions {
-  display: flex;
-  justify-content: center;
-}
-
-.track-order-button-list {
-  padding: 6px 10px;
-  font-size: 0.85rem;
-  color: white;
-  background: linear-gradient(144deg,#af40ff,
-              #5b42f3 50%,#00ddeb);
-  border: 1px solid #d1d5db;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.track-order-button-list:hover {
-  background: linear-gradient(144deg,#9706ff,
-              #2f0fff 50%,#18f0ff);
 }
 
 /* Status badge styles */
@@ -144,6 +127,18 @@
   color: #b91c1c;
 }
 
+/* NEW CSS FOR CLICKABLE ORDER ROW */
+.clickable-order-row {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition for hover */
+}
+
+.clickable-order-row:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .orders-table-header,
@@ -156,10 +151,6 @@
   .header-item:nth-child(2),
   .row-item:nth-child(2) {
     display: none;
-  }
-
-  .order-actions {
-    justify-content: start;
   }
 }
 

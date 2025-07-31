@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 import "./MyOrders.css";
 import { backendUrl, currency } from "../App";
@@ -8,6 +8,7 @@ const MyOrdersList = () => {
   const [myOrders, setMyOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const token = localStorage.getItem("userToken");
   const userId = localStorage.getItem("userId");
@@ -35,7 +36,7 @@ const MyOrdersList = () => {
     };
 
     fetchMyOrders();
-  }, []);
+  }, [userId, token]); // Add userId and token to dependency array
 
   if (loading) {
     return <div className="my-orders-container">Loading orders...</div>;
@@ -45,6 +46,11 @@ const MyOrdersList = () => {
     return <div className="my-orders-container error-message">{error}</div>;
   }
 
+  // Function to handle click on an order row
+  const handleOrderClick = (orderId) => {
+    navigate(`/trackorder/${orderId}`);
+  };
+
   return (
     <div className="my-orders-container">
       <h2>My Orders</h2>
@@ -53,16 +59,21 @@ const MyOrdersList = () => {
       ) : (
         <div className="orders-table-wrapper">
           <div className="orders-table-header">
-            <div className="header-item product-header">Items</div>{" "}
             <div className="header-item">Order ID</div>
+            <div className="header-item product-header">Items</div>
             <div className="header-item">Amount</div>
             <div className="header-item">Status</div>
             {/* <div className="header-item">Order Date</div> */}
             {/* <div className="header-item actions-header">Actions</div> */}
           </div>
           {myOrders.map((order) => (
-            <div className="order-row" key={order._id}>
-              {" "}
+            // Wrap the order-row div with a clickable div that calls handleOrderClick
+            <div
+              className="order-row clickable-order-row" // Added a new class for styling
+              key={order._id}
+              onClick={() => handleOrderClick(order._id)}
+            >
+              <div className="row-item">{order._id}</div>
               <div className="row-item product-details">
                 {order.items.map(
                   (
@@ -82,7 +93,6 @@ const MyOrdersList = () => {
                   )
                 )}
               </div>
-              <div className="row-item">{order._id}</div>{" "}
               <div className="row-item">
                 {currency}
                 {order.amount.toFixed(2)}
