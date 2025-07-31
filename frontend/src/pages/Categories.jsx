@@ -10,14 +10,13 @@ function Categories() {
   const [categoryProducts, setCategoryProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // Get cart state and functions from the global context, including loading and error
   const {
     cart,
     addToCart,
     incrementQuantity,
     decrementQuantity,
-    loading: cartLoading, // Add cartLoading here
-    error: cartError,     // Add cartError here
+    loading: cartLoading,
+    error: cartError,
   } = useCart();
 
   useEffect(() => {
@@ -40,7 +39,18 @@ function Categories() {
         });
 
         if (response.status === 200) {
-          setCategoryProducts(response.data.products);
+          const sortedProducts = response.data.products.sort((a, b) => {
+            const nameA = a.name.toUpperCase();
+            const nameB = b.name.toUpperCase();
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+          });
+          setCategoryProducts(sortedProducts);
         } else {
           console.error(
             "Failed to fetch products for category:",
@@ -57,7 +67,7 @@ function Categories() {
     };
 
     fetchCategoryProducts();
-  }, [location.search]); // Re-run effect when the search part of the URL changes
+  }, [location.search]);
 
   return (
     <>
@@ -76,9 +86,8 @@ function Categories() {
               categoryProducts.map((product) => {
                 const selectedColor = "Black";
 
-                // Construct the cart item ID to match the backend structure (e.g., "productId_color")
                 const cartItemId = `${product._id}_${selectedColor}`;
-                // Get the quantity of this specific product+color combination from the cart
+
                 const currentQuantity = cart[cartItemId]?.quantity || 0;
 
                 return (
@@ -118,7 +127,7 @@ function Categories() {
                         onClick={() =>
                           addToCart(product._id, 1, selectedColor, product)
                         }
-                        disabled={cartLoading} // Disable button if cart is loading
+                        disabled={cartLoading}
                       >
                         Add to Cart
                       </button>

@@ -6,12 +6,22 @@ const userSchema = new mongoose.Schema(
         lname: { type: String, required: true },
         email: { type: String, required: true, unique: true },
         password: { type: String, required: true },
-        // isAdmin: { type: Boolean, required: true, default: false },
         cartData: {type: Object, default: {}},
-        shippingDetails: {type: Object, default: {}},
+        shippingDetails: [
+            {
+                fullName: { type: String },
+                addressLine1: { type: String },
+                addressLine2: { type: String },
+                city: { type: String },
+                state: { type: String },
+                postalCode: { type: String },
+                country: { type: String },
+                phoneNumber: { type: String },
+            }
+        ],
         billingDetails: {type: Object, default: {}},
     }, {minimize: false}
 );
 
-const userModel = mongoose.model.user || mongoose.model("User", userSchema);
+const userModel = mongoose.models.user || mongoose.model("User", userSchema);
 export default userModel;
