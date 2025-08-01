@@ -38,6 +38,7 @@ const TrackOrder = () => {
     fetchOrderDetails();
   }, [orderId]);
 
+  // Define the order statuses and their display order
   const orderSteps = [
     { name: "Order Placed", statusKey: "order placed" },
     { name: "Order Confirmed", statusKey: "order confirmed" },
@@ -53,7 +54,7 @@ const TrackOrder = () => {
     const lowerCaseCurrentStatus = currentOrderStatus.toLowerCase();
 
     if (lowerCaseCurrentStatus === "cancelled") {
-      if (stepStatusKey <= "order placed") {
+      if (stepStatusKey === "order placed") {
         return "completed";
       } else if (stepStatusKey === "cancelled") {
         return "active";
@@ -62,6 +63,7 @@ const TrackOrder = () => {
       }
     }
 
+    // Normal progression for non-cancelled orders
     const currentOrderIndex = orderSteps.findIndex(
       (step) => step.statusKey === lowerCaseCurrentStatus
     );
@@ -128,7 +130,9 @@ const TrackOrder = () => {
         </div>
         <div className="summary-item">
           <strong>Order Date:</strong>{" "}
-          {new Date(order.createdAt).toLocaleDateString()}
+          {order.statusHistory && order.statusHistory.length > 0
+            ? new Date(order.statusHistory[0].timestamp).toLocaleDateString()
+            : new Date(order.createdAt).toLocaleDateString()}
         </div>
       </div>
 
@@ -151,10 +155,22 @@ const TrackOrder = () => {
           const isCompleted = status === "completed";
           const isActive = status === "active";
 
+          const stepHistoryEntry = order.statusHistory
+            ? order.statusHistory.find(
+                (entry) => entry.status.toLowerCase() === step.statusKey
+              )
+            : null;
+          const stepTimestamp = stepHistoryEntry
+            ? stepHistoryEntry.timestamp
+            : null;
+
           return (
             <div
               key={step.statusKey}
-              className={`stepper-step stepper-${status}`}
+              className={`stepper-step stepper-${status} ${step.statusKey.replace(
+                " ",
+                "-"
+              )}`}
             >
               <div className="stepper-circle">
                 {isCompleted ? (
@@ -172,8 +188,22 @@ const TrackOrder = () => {
                   index + 1
                 )}
               </div>
-              {index < orderSteps.length - 1 &&
-                !(isOrderCancelled && step.statusKey === "cancelled") && (
+              {/* Don't render line after the last step being displayed */}
+              {!(
+                isOrderCancelled &&
+                step.statusKey === "cancelled" &&
+                index ===
+                  orderSteps.findIndex((s) => s.statusKey === "cancelled")
+              ) && // No line after cancelled step if it's the last rendered
+                !(index === orderSteps.length - 1 && !isOrderCancelled) && // No line after delivered if not cancelled
+                !(
+                  index ===
+                    orderSteps.findIndex(
+                      (s) =>
+                        s.statusKey ===
+                        (isOrderCancelled ? "cancelled" : "delivered")
+                    ) && index !== orderSteps.length - 1
+                ) && ( // No line after current last rendered step
                   <div className="stepper-line" />
                 )}
               <div className="stepper-content">
@@ -183,18 +213,9 @@ const TrackOrder = () => {
                   {isActive && "In Progress"}
                   {!isCompleted && !isActive && "Pending"}
                 </div>
-                {/* Display actual order creation time for "Order Placed" */}
-                {step.statusKey === "order placed" && order.createdAt && (
-                  <div className="stepper-time">
-                    {formatDateTime(order.createdAt)}
-                  </div>
-                )}
-                {/* Placeholder for other step times. You'll need `order.statusHistory` from your backend. */}
-                {step.statusKey !== "order placed" && (
-                  <div className="stepper-time">
-                    {status === "pending" ? "Estimated: N/A" : "N/A"}
-                  </div>
-                )}
+                <div className="stepper-time">
+                  {stepTimestamp ? formatDateTime(stepTimestamp) : "N/A"}
+                </div>
               </div>
             </div>
           );

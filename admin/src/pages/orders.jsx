@@ -84,9 +84,9 @@ function Orders({ setToken, token }) {
     "Order Placed",
     "Order Confirmed",
     "Order Packed",
-    "Ready to Ship",
+    "Ready To Ship",
     "Shipped",
-    "Attempt to Deliver",
+    "Out For Delivery",
     "Delivered",
     "Cancelled",
   ];
