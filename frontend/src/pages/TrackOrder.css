@@ -99,6 +99,10 @@ body {
   background-color: #dcfce7;
   color: #16a34a;
 }
+.status-cancelled {
+  background-color: #fecaca;
+  color: #dc2626;
+}
 
 .stepper-box {
   border-radius: 12px;
@@ -131,6 +135,10 @@ body {
   background-color: #0f172a;
 }
 
+.stepper-active.stepper-cancelled .stepper-line {
+  background-color: #dc2626;
+}
+
 .stepper-step:last-child .stepper-line {
   display: none;
 }
@@ -160,6 +168,12 @@ body {
   border: 2px solid #0f172a;
   color: #0f172a;
 }
+/* New style for the active "Cancelled" stepper circle */
+.stepper-active.stepper-cancelled .stepper-circle {
+  background-color: #fee2e2; /* Light red background for circle */
+  border: 2px solid #dc2626; /* Red border for circle */
+  color: #dc2626; /* Red text for circle */
+}
 
 .stepper-pending .stepper-circle {
   background-color: #f1f5f9;
@@ -183,6 +197,10 @@ body {
 .stepper-active .stepper-title {
   color: #0f172a;
 }
+.stepper-active.stepper-cancelled .stepper-title {
+  color: #dc2626;
+}
+
 .stepper-pending .stepper-title {
   color: #94a3b8;
 }
@@ -200,6 +218,10 @@ body {
 .stepper-active .stepper-status {
   color: #2563eb;
 }
+.stepper-active.stepper-cancelled .stepper-status {
+  color: #dc2626;
+}
+
 .stepper-pending .stepper-status {
   color: #94a3b8;
 }

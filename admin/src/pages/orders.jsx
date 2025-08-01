@@ -88,6 +88,7 @@ function Orders({ setToken, token }) {
     "Shipped",
     "Attempt to Deliver",
     "Delivered",
+    "Cancelled",
   ];
 
   return (
