@@ -5,7 +5,6 @@ import orderModel from "../models/orderModel.js";
 // Controller Function for Placing Order
 const placeOrder = async (req, res) => {
   try {
-    // Destructure all necessary data from the request body
     const {
       userId,
       cartItemsArray,
@@ -67,22 +66,22 @@ const placeOrder = async (req, res) => {
 // Controller Function for Placing Order USing Stripe
 const placeOrderStripe = async (req, res) => {
   try {
-    // Stripe integration logic would go here
+    res.status(501).json({ success: false, message: "Stripe integration not yet implemented" });
   } catch (error) {
     console.error("Error with Stripe payment:", error);
-    res.status(500).json({ success: false, message: "Stripe payment failed" });
+    res.status(500).json({ success: false, message: "Stripe payment failed", error: error.message });
   }
 };
 
 // Controller Function for Verifiying Payment Using Stripe
 const verifyPayment = async (req, res) => {
   try {
-    // Payment verification logic would go here
+    res.status(501).json({ success: false, message: "Payment verification not yet implemented" });
   } catch (error) {
     console.error("Error verifying payment:", error);
     res
       .status(500)
-      .json({ success: false, message: "Payment verification failed" });
+      .json({ success: false, message: "Payment verification failed", error: error.message });
   }
 };
 
@@ -93,7 +92,7 @@ const allOrders = async (req, res) => {
     res.json({ success: true, orders });
   } catch (error) {
     console.error("Error fetching all orders:", error);
-    res.status(500).json({ success: false, message: "Failed to fetch orders" });
+    res.status(500).json({ success: false, message: "Failed to fetch orders", error: error.message });
   }
 };
 
@@ -107,7 +106,7 @@ const updateOrderStatus = async (req, res) => {
     console.error("Error updating order status:", error);
     res
       .status(500)
-      .json({ success: false, message: "Failed to update order status" });
+      .json({ success: false, message: "Failed to update order status", error: error.message });
   }
 };
 
@@ -121,9 +120,27 @@ const userOrders = async (req, res) => {
     console.error("Error fetching user orders:", error);
     res
       .status(500)
-      .json({ success: false, message: "Failed to fetch user orders" });
+      .json({ success: false, message: "Failed to fetch user orders", error: error.message });
   }
 };
+
+// Controller Function for Getting a Single Order by ID
+const getOrderById = async (req, res) => {
+    try {
+        const { orderId } = req.params;
+        const order = await orderModel.findById(orderId);
+
+        if (!order) {
+            return res.status(404).json({ success: false, message: "Order not found." });
+        }
+
+        res.status(200).json({ success: true, order });
+    } catch (error) {
+        console.error("Error fetching order by ID:", error);
+        res.status(500).json({ success: false, message: "Failed to fetch order details.", error: error.message });
+    }
+};
+
 
 export {
   placeOrder,
@@ -132,4 +149,5 @@ export {
   allOrders,
   updateOrderStatus,
   userOrders,
+  getOrderById,
 };

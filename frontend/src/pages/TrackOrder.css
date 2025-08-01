@@ -1,114 +1,381 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+.track-order-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.track-order-container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.order-details-summary {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #f9fafb;
+  margin-bottom: 2rem;
+}
+
+.summary-item {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.summary-item strong {
+  display: block;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+.summary-item span {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.order-status {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.status-processing {
+  background-color: #fef9c3;
+  color: #ca8a04;
+}
+.status-order-placed {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.status-order-confirmed {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+.status-order-packed {
+  background-color: #fffbeb;
+  color: #d97706;
+}
+.status-ready-to-ship {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+.status-shipped {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.status-out-for-delivery {
+  background-color: #d1fae5;
+  color: #059669;
+}
+.status-delivered {
+  background-color: #dcfce7;
+  color: #16a34a;
 }
 
 .stepper-box {
-    background-color: white;
-    border-radius: 12px;
-    padding: 32px;
-    width: 400px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin: 20px auto;
+  border-radius: 12px;
+  padding: 2.5rem;
+  background-color: #f9fafb;
+  margin-bottom: 2.5rem;
+}
+
+.stepper-step {
+  display: flex;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.stepper-step:last-child {
+  margin-bottom: 0;
+}
+
+.stepper-line {
+  position: absolute;
+  left: 24px;
+  top: 50px;
+  bottom: -32px;
+  width: 2px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.stepper-completed .stepper-line {
+  background-color: #0f172a;
+}
+
+.stepper-step:last-child .stepper-line {
+  display: none;
+}
+
+.stepper-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.stepper-completed .stepper-circle {
+  background-color: #0f172a;
+  color: white;
+}
+
+.stepper-active .stepper-circle {
+  background-color: #fff;
+  border: 2px solid #0f172a;
+  color: #0f172a;
+}
+
+.stepper-pending .stepper-circle {
+  background-color: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  color: #94a3b8;
+}
+
+.stepper-content {
+  flex: 1;
+}
+
+.stepper-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.stepper-completed .stepper-title {
+  color: #0f172a;
+}
+.stepper-active .stepper-title {
+  color: #0f172a;
+}
+.stepper-pending .stepper-title {
+  color: #94a3b8;
+}
+
+.stepper-status {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.stepper-completed .stepper-status {
+  color: #16a34a;
+}
+.stepper-active .stepper-status {
+  color: #2563eb;
+}
+.stepper-pending .stepper-status {
+  color: #94a3b8;
+}
+
+.stepper-time {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.order-items-section,
+.shipping-address-section {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.order-items-section h3,
+.shipping-address-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-item-detail-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.item-image-track {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info-track {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.item-name-track {
+  font-weight: 600;
+  color: #374151;
+}
+
+.item-quantity-price-track {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.shipping-address-details p {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.shipping-address-details p strong {
+  color: #1f2937;
+}
+
+.error-message {
+  color: #ef4444;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .track-order-container {
+    max-width: 768px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .track-order-container {
+    max-width: 100%;
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .track-order-container h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .order-details-summary {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .stepper-box {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-order-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .track-order-container h1 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .order-details-summary {
+    padding: 0.75rem;
   }
 
   .stepper-step {
-    display: flex;
-    margin-bottom: 32px;
-    position: relative;
-  }
-
-  .stepper-step:last-child {
-    margin-bottom: 0;
-  }
-
-  .stepper-line {
-    position: absolute;
-    left: 19px;
-    top: 40px;
-    bottom: -32px;
-    width: 2px;
-    background-color: #e2e8f0;
-    z-index: 1;
-  }
-
-  .stepper-step:last-child .stepper-line {
-    display: none;
+    margin-bottom: 1.5rem;
   }
 
   .stepper-circle {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 16px;
-    z-index: 2;
+    margin-right: 1rem;
+    font-size: 1rem;
   }
 
-  .stepper-completed .stepper-circle {
-    background-color: #0f172a;
-    color: white;
-  }
-
-  .stepper-active .stepper-circle {
-    border: 2px solid #0f172a;
-    color: #0f172a;
-  }
-
-  .stepper-pending .stepper-circle {
-    border: 2px solid #e2e8f0;
-    color: #94a3b8;
-  }
-
-  .stepper-content {
-    flex: 1;
+  .stepper-line {
+    left: 19px;
+    top: 40px;
+    bottom: -32px;
   }
 
   .stepper-title {
-    font-weight: 600;
-    margin-bottom: 4px;
+    font-size: 1rem;
   }
 
-  .stepper-completed .stepper-title {
-    color: #0f172a;
+  .order-items-section,
+  .shipping-address-section {
+    padding: 1rem;
   }
 
-  .stepper-active .stepper-title {
-    color: #0f172a;
+  .order-items-section h3,
+  .shipping-address-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
   }
 
-  .stepper-pending .stepper-title {
-    color: #94a3b8;
+  .order-item-detail-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
   }
 
-  .stepper-status {
-    font-size: 13px;
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 12px;
-    margin-top: 4px;
+  .item-image-track {
+    width: 50px;
+    height: 50px;
   }
 
-  .stepper-completed .stepper-status {
-    background-color: #dcfce7;
-    color: #166534;
+  .item-info-track {
+    text-align: left;
   }
-
-  .stepper-active .stepper-status {
-    background-color: #dbeafe;
-    color: #1d4ed8;
-  }
-
-  .stepper-pending .stepper-status {
-    background-color: #f1f5f9;
-    color: #64748b;
-  }
-
-  .stepper-time {
-    font-size: 12px;
-    color: #94a3b8;
-    margin-top: 4px;
-  }
+}

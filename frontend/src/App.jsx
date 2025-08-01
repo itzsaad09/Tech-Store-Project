@@ -39,7 +39,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/trackorder" element={<TrackOrder />} />
+          <Route path="/trackorder/:orderId" element={<TrackOrder />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/refundpolicy" element={<RefundPolicy />} />
