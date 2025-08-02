@@ -253,18 +253,19 @@
   }
 }
 
-/* Responsive adjustments */
-
-/* Tablets */
 @media (max-width: 1024px) {
+  .dashboard {
+    margin-left: 8rem;
+  }
+
   .dashboard h1 {
     margin-left: 12rem;
     font-size: 1.6rem;
   }
 
   .orders-container {
-    margin-left: 16rem;
-    margin-top: -30rem;
+    margin-left: 20rem;
+    margin-top: -20rem;
     padding: 1rem;
     flex-direction: column;
   }
@@ -288,6 +289,10 @@
 
 /* Mobile Landscape */
 @media (max-width: 768px) {
+  .dashboard {
+    margin-left: 10rem;
+  }
+
   .dashboard h1 {
     font-size: 1.4rem;
     margin: 1rem auto;
@@ -295,6 +300,7 @@
 
   .orders-container {
     margin: 0;
+    margin-top: -22rem;
     padding: 1rem;
     flex-direction: column;
   }
@@ -318,21 +324,24 @@
 
 /* Mobile Portrait */
 @media (max-width: 480px) {
+  .dashboard {
+    margin-left: 12rem;
+  }
   .dashboard h1 {
     font-size: 1.2rem;
-    margin: 0 auto;
     text-align: center;
   }
 
   .orders-container {
     margin: 0;
+    margin-top: -22rem;
     padding: 0.5rem;
     flex-direction: column;
   }
 
   .orders-table-wrapper {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
   }
 
   .orders-table th,

@@ -19,7 +19,6 @@
 .logo-container {
   margin-left: 5rem;
   margin-top: -5rem;
-  margin-bottom: 5rem;
 }
 
 .logo {
@@ -155,6 +154,7 @@
   .add-product,
   .list-item,
   .orders,
+  .users,
   .logout {
     margin: 0; /* Remove margins for horizontal layout */
   }
@@ -162,6 +162,7 @@
   .add-product-button,
   .list-item-button,
   .orders-button,
+  .users-button,
   .logout-button {
     width: 3rem; /* Make buttons smaller (icon only) */
     height: 3rem; /* Make buttons square */
@@ -176,6 +177,7 @@
   .add-product-button span, /* Select the text content inside the button */
   .list-item-button span,
   .orders-button span,
+  .users-button span,
   .logout-button span {
     display: none; /* Hide text */
   }
@@ -183,6 +185,7 @@
   .add-product .add-icon,
   .list-item .list-icon,
   .orders .orders-icon,
+  .users .users-icon,
   .logout .logout-icon {
     margin: 0; /* Remove icon margins */
     float: none; /* Remove float */
@@ -203,6 +206,7 @@
   .add-product-button,
   .list-item-button,
   .orders-button,
+  .users-button,
   .logout-button {
     width: 2.5rem; /* Even smaller buttons */
     height: 2.5rem;
@@ -211,6 +215,7 @@
   .add-product .add-icon,
   .list-item .list-icon,
   .orders .orders-icon,
+  .users .users-icon,
   .logout .logout-icon {
     font-size: 1.2rem; /* Slightly smaller icons */
   }

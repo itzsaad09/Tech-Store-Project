@@ -101,12 +101,12 @@
   }
 
   .product-list {
-    margin-left: 16rem;
-    margin-top: -30rem; /* Adjusted */
+    margin-left: 20rem;
+    margin-top: -20rem; /* Adjusted */
   }
 
   .product-card {
-    width: calc(50% - 2rem);
+    width: calc(40% - 2rem);
   }
 }
 
@@ -118,7 +118,7 @@
 
   .product-list {
     margin-left: 0;
-    margin-top: -35rem; /* Adjusted */
+    margin-top: -20rem; /* Adjusted */
   }
 
   .product-card {
@@ -128,14 +128,13 @@
 
 @media (max-width: 480px) {
   .dashboard h1 {
-    margin-left: 0;
     text-align: center;
     font-size: 1.4rem;
   }
 
   .product-list {
     margin-left: 0;
-    margin-top: -28rem; /* Adjusted */
+    margin-top: -19rem; /* Adjusted */
     justify-content: center;
   }
 
