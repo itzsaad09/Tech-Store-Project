@@ -101,6 +101,7 @@ const TrackOrder = () => {
     return date.toLocaleString("en-US", {
       month: "short",
       day: "numeric",
+      year: "numeric",
       hour: "numeric",
       minute: "numeric",
       hour12: true,
@@ -129,10 +130,8 @@ const TrackOrder = () => {
           </span>
         </div>
         <div className="summary-item">
-          <strong>Order Date:</strong>{" "}
-          {order.statusHistory && order.statusHistory.length > 0
-            ? new Date(order.statusHistory[0].timestamp).toLocaleDateString()
-            : new Date(order.createdAt).toLocaleDateString()}
+          <strong>Order Date:</strong>
+          {formatDateTime(order.statusHistory[0].timestamp)}
         </div>
       </div>
 
