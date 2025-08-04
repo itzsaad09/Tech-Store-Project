@@ -21,6 +21,7 @@ import MyOrders from "./pages/MyOrders.jsx"
 import MyProfile from "./components/MyProfile.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 export const backendUrl = import.meta.env.VITE_BACKEND_URL;
 export const currency = "Rs. ";
@@ -51,7 +52,7 @@ function App() {
           <Route path="/payment" element={<PaymentMethod />} />
           <Route path="/myorders" element={<MyOrders />} />
           <Route path="/profile" element={<MyProfile />} />
-          <Route path="/*" element="404 Not Found" />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
         </CartProvider>
