@@ -21,7 +21,9 @@ function ShowUsers({ setToken }) {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get(backendUrl + "/api/user/display");
+      const response = await axios.get(backendUrl + "/api/user/display", {
+        headers: { token: sessionStorage.getItem("token") },
+      });
 
       if (response.status !== 200) {
         throw new Error("Failed to fetch users");
