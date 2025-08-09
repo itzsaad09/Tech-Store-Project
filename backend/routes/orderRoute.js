@@ -18,6 +18,6 @@ orderRoute.post('/verify', userAuth, verifyPayment)
 
 // For User
 orderRoute.get('/userorders/:userId', userAuth, userOrders) 
-orderRoute.get('/:orderId', getOrderById);
+orderRoute.get('/:orderId', userAuth, getOrderById);
 
 export default orderRoute;

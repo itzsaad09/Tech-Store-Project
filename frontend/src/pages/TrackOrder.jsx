@@ -21,7 +21,9 @@ const TrackOrder = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await axios.get(`${backendUrl}/api/order/${orderId}`);
+        const response = await axios.get(`${backendUrl}/api/order/${orderId}`, {
+          headers: { token: localStorage.getItem("userToken") },
+        });
         if (response.data.success) {
           setOrder(response.data.order);
         } else {
